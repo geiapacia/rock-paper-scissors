@@ -1,0 +1,21 @@
+h1 {
+    color:antiquewhite;
+    font-weight: 150;
+    font-family: Tahoma;
+    align-content: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #2C2827;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    color:antiquewhite;
+}

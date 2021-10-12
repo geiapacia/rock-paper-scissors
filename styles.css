@@ -1,21 +1,52 @@
+body{
+    background-color: #2C2827;
+}
+
 h1 {
     color:antiquewhite;
-    font-weight: 150;
+    font-weight: bold;
+    font-size: 4rem;
     font-family: Tahoma;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
 }
 
 .container {
     background-color: #2C2827;
 }
 
-button {
+.selections {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 100ms;
+    
 }
 
-h3 {
+button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 5rem;
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+.score {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 2rem;
     color:antiquewhite;
+    font-size: 3.5rem;
+}
+
+span{
+    text-align: center;
+    font-size: 2rem;
+    color: azure;
 }

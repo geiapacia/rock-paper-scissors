@@ -60,3 +60,8 @@ game();
     while( prompt("Do you want to play again, yes or no") == "yes") {
     alert(game());
 };
+
+//UI
+
+const btn = document.querySelector('#btn');
+btn.addEventListener('click', playRound());

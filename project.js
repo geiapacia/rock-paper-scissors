@@ -1,5 +1,5 @@
-const playerSelection = prompt("Choose rock, paper, or scissors!");
-const computerSelection = computerPlay();
+//const playerSelection = prompt("Choose rock, paper, or scissors!");
+
 let computer = 0;
 let player = 0;
 let winner='';
@@ -7,7 +7,7 @@ let winner='';
 function computerPlay() {
     let selection = ["rock", "paper", "scissors"],
     selectionUse = selection[Math.floor(Math.random() * selection.length)];
-    alert(selectionUse);
+    //alert(selectionUse);
     return(selectionUse);
     
 }
@@ -27,22 +27,19 @@ function playRound(playerSelection, computerSelection){
     } else if (playerSelection === "paper" && computerSelection === "paper") {
         roundWinner.innerHTML="It's a tie!";
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        
         computer++; 
         roundWinner.innerHTML="Computer wins!";
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        
         computer++; 
         roundWinner.innerHTML="Computer wins!";
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        
         player++;
         roundWinner.innerHTML="Player wins!";
     } else if(playerSelection === "scissors" && computerSelection === "scissors") {
         roundWinner.innerHTML("It's a tie!");
     }
 };
-console.log(playRound(playerSelection, computerSelection));
+//console.log(playRound(playerSelection, computerSelection));
 
 
 /*function game (){
@@ -78,6 +75,22 @@ const btnScissors = document.getElementById('#btnScissors');
 const player = document.getElementById('#player');
 const computer = document.getElementById('#computer');
 
-btnRock.addEventListener('click', () => handleClick('rock'));
-btnPaper.addEventListener('click', () => handleClick('paper'));
+btnRock.addEventListener('click', () => handleClick('rock'))
+btnPaper.addEventListener('click', () => handleClick('paper'))
 btnScissors.addEventListener('click', () => handleClick('scissors'))
+
+function handleClick(playerSection) {
+    if (isGameOver()) {
+        return
+    }
+}
+
+const computerSelection = computerPlay();
+playRound(playerSelection, computerSelection)
+updateChoices(playerSelection, computerSelection)
+updateScore()
+
+function updateChoices() {
+    return roundWinner
+}
+
